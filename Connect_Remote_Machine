@@ -1,0 +1,17 @@
+systemctl status sshd
+# Displays the status of the SSH service, including the port number it is currently using.
+
+sudo apt install openssh-server
+# Installs the OpenSSH server package to enable SSH connections.
+
+sudo nano /etc/ssh/sshd_config
+# Opens the SSH configuration file for editing (e.g., to change the default port). Remember to restart the service after making changes.
+
+sudo ss -antup
+# Lists all active ports and their associated processes. Focus on the "Local Address" column for open ports.
+
+ip a s ens33
+# Displays detailed network information for the `ens33` interface, including the IP address.
+
+ssh user@ip -p portnumber
+# Connects to a remote machine using SSH, specifying the username, IP address, and port number.
